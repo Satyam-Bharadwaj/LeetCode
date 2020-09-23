@@ -1,7 +1,7 @@
 /**
  * 
  * https://leetcode.com/explore/learn/card/linked-list/214/two-pointer-technique/1214/
- * reference for mathematics involved: https://www.geeksforgeeks.org/find-first-node-of-loop-in-a-linked-list/
+ * Reference for mathematics involved: https://www.geeksforgeeks.org/find-first-node-of-loop-in-a-linked-list/
  */
 /**
  * Definition for singly-linked list.
@@ -32,7 +32,7 @@ public class Solution {
                  fastP=fastP.next;
                 }
         if(slowP==fastP)return slowP;
-            };
+         }
             
         }
         return null;
