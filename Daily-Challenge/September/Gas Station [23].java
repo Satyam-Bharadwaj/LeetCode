@@ -2,8 +2,8 @@
  * https://leetcode.com/explore/challenge/card/september-leetcoding-challenge/557/week-4-september-22nd-september-28th/3470/
  */
 
-//O(N^2)
-class Solution {
+// O(N^2)
+class Solution1 {
     public int canCompleteCircuit(int[] gas, int[] cost) {
         int[] positionalCost = new int[gas.length];
 
@@ -31,7 +31,8 @@ class Solution {
                 gasAvailable += positionalCost[j];
 
             }
-            if (gasAvailable + lefthalfRequirement >= 0 && j == gas.length) return i;
+            if (gasAvailable + lefthalfRequirement >= 0 && j == gas.length)
+                return i;
             lefthalfRequirement += positionalCost[i];
 
 
@@ -40,8 +41,9 @@ class Solution {
     }
 }
 
-//O(N)
-class Solution {
+
+// O(N)
+class Solution2 {
     public int canCompleteCircuit(int[] gas, int[] cost) {
 
         int potentialStart = 0;
@@ -60,7 +62,8 @@ class Solution {
 
         }
 
-        if (totalGas >= 0) return potentialStart;
+        if (totalGas >= 0)
+            return potentialStart;
         return -1;
     }
 }
